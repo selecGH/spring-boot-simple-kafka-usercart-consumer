@@ -1,9 +1,7 @@
 package dev.selec.backend.spring.kafka.usercartconsumer.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import dev.selec.backend.spring.kafka.usercartproducer.serializer.JsonDateDeserializer;
-import dev.selec.backend.spring.kafka.usercartproducer.serializer.JsonDateSerializer;
+import dev.selec.backend.spring.kafka.usercartconsumer.deserializer.JsonDateDeserializer;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,7 +26,6 @@ public final class UserCart implements Serializable {
 
     @Builder.Default
     @JsonDeserialize(using = JsonDateDeserializer.class)
-    @JsonSerialize(using = JsonDateSerializer.class)
     private LocalDateTime createdAt = LocalDateTime.now();
 
     public static UserCart createRandom() {
