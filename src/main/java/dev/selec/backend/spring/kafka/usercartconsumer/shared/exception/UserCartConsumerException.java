@@ -1,4 +1,4 @@
-package dev.selec.backend.spring.kafka.usercartconsumer.exception;
+package dev.selec.backend.spring.kafka.usercartconsumer.shared.exception;
 
 public class UserCartConsumerException extends RuntimeException {
 

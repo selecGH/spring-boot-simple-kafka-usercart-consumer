@@ -1,4 +1,4 @@
-package dev.selec.backend.spring.kafka.usercartconsumer.model;
+package dev.selec.backend.spring.kafka.usercartconsumer.cart.domain.entities;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import dev.selec.backend.spring.kafka.usercartconsumer.deserializer.JsonDateDeserializer;
@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -16,6 +17,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Document
 public final class UserCart implements Serializable {
 
     @Serial

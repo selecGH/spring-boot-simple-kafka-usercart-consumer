@@ -2,8 +2,8 @@ package dev.selec.backend.spring.kafka.usercartconsumer.deserializer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import dev.selec.backend.spring.kafka.usercartconsumer.exception.UserCartConsumerException;
-import dev.selec.backend.spring.kafka.usercartconsumer.model.UserCart;
+import dev.selec.backend.spring.kafka.usercartconsumer.shared.exception.UserCartConsumerException;
+import dev.selec.backend.spring.kafka.usercartconsumer.cart.domain.entities.UserCart;
 import org.apache.kafka.common.serialization.Deserializer;
 import org.springframework.stereotype.Component;
 
