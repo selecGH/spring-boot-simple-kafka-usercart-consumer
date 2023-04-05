@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
-public class UserCartListener {
+public class UserCartKafkaListener {
 
     private final UserCartReceiver receiver;
 
-    public UserCartListener(UserCartReceiver receiver) {
+    public UserCartKafkaListener(UserCartReceiver receiver) {
         this.receiver = receiver;
     }
 

@@ -30,19 +30,4 @@ public final class UserCart implements Serializable {
     @JsonDeserialize(using = JsonDateDeserializer.class)
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    public static UserCart createRandom() {
-        return UserCart.builder()
-                .userId(1L)
-                .products(List.of(UserProduct.builder()
-                                .product(Product.builder()
-                                        .id(1)
-                                        .name("product_name")
-                                        .company("company")
-                                        .price(12.4)
-                                        .build())
-                                .quantity(1)
-                        .build()))
-                .build();
-    }
-
 }
